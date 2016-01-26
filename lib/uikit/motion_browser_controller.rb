@@ -1,11 +1,17 @@
 module MIM
   class MotionBrowserController < UIViewController
     def initWithURL(url)
-      self.init
-      @url = url
-      setTitle @url
+      self.initWithURLAndTitle(url, url)
       self
     end
+
+    def initWithURLAndTitle(url, title)
+      self.init
+      @url = url
+      setTitle title
+      self
+    end
+
 
     def loadView
       self.view = MotionBrowser.new
