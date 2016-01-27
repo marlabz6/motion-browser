@@ -8,7 +8,9 @@ module MIM
       setBackgroundColor UIColor.whiteColor
 
       addSubview(@webview = UIWebView.new)
-      addSubview(@toolbar = MotionBrowserToolbar.new)
+      @toolbar = MotionBrowserToolbar.new
+      addSubview(@toolbar)
+
       @delegate = @toolbar.delegate = MotionBrowserToolbarDelegate.new(@webview)
 
       @webview.translatesAutoresizingMaskIntoConstraints = false
