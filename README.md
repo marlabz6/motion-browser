@@ -26,6 +26,8 @@ You can create the controller by simply doing this:
 
 ```ruby
 MIM::MotionBrowserController.alloc.initWithURL('https://motioninmotion.tv/')
+or
+MIM::MotionBrowserController.alloc.initWithURLAndTitle('https://motioninmotion.tv/', 'MotioninMotion tv')
 ```
 
 Then simply, push it or present it.
